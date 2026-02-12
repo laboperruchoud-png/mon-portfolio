@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mon premier article - Un exemple d'article de blog">
+    <title>Mon premier article | Raymond Perruchoud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav-logo">RP</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">A propos</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="index.html" class="nav-active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Changer le theme">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" width="20" height="20">
+                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </g>
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-article">
+            <header class="blog-article__header">
+                <a href="index.html" class="blog-article__back">&larr; Retour au blog</a>
+                <h1>Mon premier article</h1>
+                <div class="blog-article__meta">
+                    <time datetime="2026-02-12">12 fevrier 2026</time>
+                    <span class="blog-article__reading-time">3 min de lecture</span>
+                </div>
+            </header>
+
+            <div class="blog-article__content">
+                <p class="blog-article__lead">Ceci est le paragraphe d'introduction de l'article. Il devrait resumer le contenu principal et capter l'attention du lecteur.</p>
+
+                <h2>Premiere section</h2>
+                <p>Voici le contenu de la premiere section. Remplacez ce texte par votre propre contenu. Vous pouvez utiliser des paragraphes, des listes, des images et d'autres elements HTML pour structurer votre article.</p>
+
+                <p>Un deuxieme paragraphe pour illustrer l'espacement entre les elements. Le style est concu pour une lecture confortable avec une largeur de texte optimale.</p>
+
+                <h2>Deuxieme section</h2>
+                <p>Le contenu continue ici. Vous pouvez ajouter autant de sections que necessaire pour organiser vos idees de maniere claire et logique.</p>
+
+                <h3>Sous-section</h3>
+                <p>Les sous-titres permettent de hierarchiser l'information et de faciliter la navigation dans l'article.</p>
+
+                <h2>Conclusion</h2>
+                <p>Terminez votre article par une conclusion qui resume les points cles et invite eventuellement le lecteur a l'action ou a la reflexion.</p>
+            </div>
+
+            <footer class="blog-article__footer">
+                <a href="index.html" class="btn">&larr; Retour au blog</a>
+            </footer>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="https://github.com/Raymond" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer__copy">&copy; 2026 Raymond Perruchoud</p>
+        <p class="footer__credit">Construit avec Claude Code</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>

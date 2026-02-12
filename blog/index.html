@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog de Raymond Perruchoud - Articles sur le développement et l'IA">
+    <title>Blog | Raymond Perruchoud</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="nav">
+            <a href="../index.html" class="nav-logo">RP</a>
+            <ul class="nav-menu">
+                <li><a href="../index.html#about">A propos</a></li>
+                <li><a href="../index.html#projects">Projets</a></li>
+                <li><a href="index.html" class="nav-active">Blog</a></li>
+                <li><a href="../index.html#contact">Contact</a></li>
+            </ul>
+            <button class="theme-toggle" aria-label="Changer le theme">
+                <svg class="theme-icon sun" viewBox="0 0 24 24" width="20" height="20">
+                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </g>
+                </svg>
+                <svg class="theme-icon moon" viewBox="0 0 24 24" width="20" height="20">
+                    <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                </svg>
+            </button>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <main>
+        <section class="section blog-header">
+            <h1>Blog</h1>
+            <p class="blog-header__subtitle">Reflexions sur le developpement et l'IA</p>
+        </section>
+
+        <section class="section">
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <a href="mon-premier-article.html" class="blog-card__link">
+                        <div class="blog-card__meta">
+                            <time datetime="2026-02-12">12 fevrier 2026</time>
+                            <span class="blog-card__reading-time">3 min de lecture</span>
+                        </div>
+                        <h2 class="blog-card__title">Mon premier article</h2>
+                        <p class="blog-card__excerpt">Ceci est un exemple d'article pour illustrer la structure du blog. Remplacez ce contenu par votre propre article.</p>
+                    </a>
+                </article>
+
+                <article class="blog-card">
+                    <a href="apprendre-avec-ia.html" class="blog-card__link">
+                        <div class="blog-card__meta">
+                            <time datetime="2026-02-10">10 fevrier 2026</time>
+                            <span class="blog-card__reading-time">5 min de lecture</span>
+                        </div>
+                        <h2 class="blog-card__title">Apprendre a coder avec l'IA</h2>
+                        <p class="blog-card__excerpt">Comment j'utilise Claude et d'autres outils d'IA pour accelerer mon apprentissage du developpement web.</p>
+                    </a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__links">
+            <a href="https://github.com/Raymond" target="_blank" rel="noopener">GitHub</a>
+            <a href="#" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+        <p class="footer__copy">&copy; 2026 Raymond Perruchoud</p>
+        <p class="footer__credit">Construit avec Claude Code</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
