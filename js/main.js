@@ -41,18 +41,19 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-        body.classList.toggle('menu-open');
-    });
+    const toggleMenu = (open) => {
+        const isOpen = open ?? !navMenu.classList.contains('active');
+        navToggle.classList.toggle('active', isOpen);
+        navMenu.classList.toggle('active', isOpen);
+        body.classList.toggle('menu-open', isOpen);
+        navToggle.setAttribute('aria-expanded', isOpen);
+        navToggle.setAttribute('aria-label', isOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+    };
+
+    navToggle.addEventListener('click', () => toggleMenu());
 
     navMenu.querySelectorAll('a').forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
-            body.classList.remove('menu-open');
-        });
+        link.addEventListener('click', () => toggleMenu(false));
     });
 
     // Fade-in animation on scroll
@@ -75,4 +76,33 @@ document.addEventListener('DOMContentLoaded', () => {
     fadeElements.forEach(element => {
         fadeObserver.observe(element);
     });
+
+    // Load projects from JSON
+    const loadProjects = async () => {
+        const grid = document.getElementById('projects-grid');
+        if (!grid) return;
+
+        try {
+            const response = await fetch('data/projects.json');
+            if (!response.ok) throw new Error(response.statusText);
+            const projects = await response.json();
+
+            grid.innerHTML = projects.map(project => `
+                <article class="project-card">
+                    <h3 class="project-card__title">${project.name}</h3>
+                    <p class="project-card__description">${project.description}</p>
+                    <div class="project-card__languages">
+                        ${project.languages.map(lang => `<span class="project-card__tag">${lang}</span>`).join('')}
+                    </div>
+                    <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card__link">
+                        Voir sur GitHub
+                    </a>
+                </article>
+            `).join('');
+        } catch {
+            grid.innerHTML = '<p class="projects-error">Impossible de charger les projets.</p>';
+        }
+    };
+
+    loadProjects();
 });

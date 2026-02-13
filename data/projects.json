@@ -1,0 +1,20 @@
+[
+  {
+    "name": "hello-python",
+    "description": "Un script Python simple pour apprendre les bases de la programmation.",
+    "languages": ["Python"],
+    "url": "https://github.com/laboperruchoud-png/hello-python"
+  },
+  {
+    "name": "mon-portfolio",
+    "description": "Mon portfolio personnel construit avec HTML, CSS et JavaScript.",
+    "languages": ["HTML", "CSS", "JavaScript"],
+    "url": "https://github.com/laboperruchoud-png/mon-portfolio"
+  },
+  {
+    "name": "notes-cli",
+    "description": "Une application CLI pour prendre et organiser des notes.",
+    "languages": ["Python"],
+    "url": "https://github.com/laboperruchoud-png/notes-cli"
+  }
+]
