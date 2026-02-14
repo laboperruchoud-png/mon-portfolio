@@ -20,6 +20,7 @@
     <meta name="twitter:description" content="Portfolio de Raymond Perruchoud - Développeur en formation. Je construis des projets concrets avec l'IA.">
     <meta name="twitter:image" content="https://raymondperruchoud.ch/assets/images/og-image.jpg">
 
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
     <title>Montportfolio | Raymond Perruchoud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,39 +32,23 @@
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
-        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:#05051a;color:#b8860b}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:#05051a;color:#f5d77a}
         .header{position:fixed;top:0;left:0;right:0;z-index:100;background-color:rgba(5,5,26,0.95);backdrop-filter:blur(10px)}
     </style>
+    <noscript><style>.fade-in{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" aria-label="Navigation principale">
             <a href="#" class="nav-logo">RP</a>
-            <ul class="nav-menu" id="nav-menu" role="navigation">
+            <ul class="nav-menu" id="nav-menu">
                 <li><a href="#about">À propos</a></li>
                 <li><a href="#projects">Projets</a></li>
                 <li><a href="blog/index.html">Blog</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" aria-label="Changer le thème">
-                <svg class="theme-icon sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
-                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </g>
-                </svg>
-                <svg class="theme-icon moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                    <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-            </button>
+            <button class="theme-toggle" aria-label="Changer le thème"></button>
             <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
@@ -83,7 +68,7 @@
         <section id="about" class="section about fade-in">
             <h2>À propos</h2>
             <div class="about__content">
-                <div class="about__photo">
+                <div class="about__photo" aria-hidden="true">
                     <span>Photo</span>
                 </div>
                 <p class="about__text">Passionné par la technologie et l'intelligence artificielle, j'apprends à construire des projets concrets en utilisant les outils les plus avancés du marché. Ce portfolio est lui-même construit avec Claude Code.</p>
@@ -101,16 +86,16 @@
             <h2>Me contacter</h2>
             <form class="contact__form">
                 <div class="contact__field">
-                    <label for="name" class="contact__label">Nom</label>
-                    <input type="text" id="name" name="name" class="contact__input" required>
+                    <label for="name" class="contact__label">Nom <abbr title="obligatoire" aria-label="obligatoire">*</abbr></label>
+                    <input type="text" id="name" name="name" class="contact__input" required aria-required="true">
                 </div>
                 <div class="contact__field">
-                    <label for="email" class="contact__label">Email</label>
-                    <input type="email" id="email" name="email" class="contact__input" required>
+                    <label for="email" class="contact__label">Email <abbr title="obligatoire" aria-label="obligatoire">*</abbr></label>
+                    <input type="email" id="email" name="email" class="contact__input" required aria-required="true">
                 </div>
                 <div class="contact__field">
-                    <label for="message" class="contact__label">Message</label>
-                    <textarea id="message" name="message" class="contact__input contact__textarea" rows="5" required></textarea>
+                    <label for="message" class="contact__label">Message <abbr title="obligatoire" aria-label="obligatoire">*</abbr></label>
+                    <textarea id="message" name="message" class="contact__input contact__textarea" rows="5" required aria-required="true"></textarea>
                 </div>
                 <button type="submit" class="btn">Envoyer</button>
             </form>
@@ -120,7 +105,6 @@
     <footer class="footer">
         <div class="footer__links">
             <a href="https://github.com/Raymond" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(nouvelle fenêtre)</span></a>
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(nouvelle fenêtre)</span></a>
         </div>
         <p class="footer__copy">&copy; 2026 Raymond Perruchoud</p>
         <p class="footer__credit">Construit avec Claude Code</p>

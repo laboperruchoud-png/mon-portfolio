@@ -11,6 +11,27 @@ document.addEventListener('DOMContentLoaded', () => {
     const body = document.body;
     const html = document.documentElement;
 
+    // Theme toggle icons (single source, avoids HTML duplication)
+    if (themeToggle) {
+        themeToggle.innerHTML = `
+            <svg class="theme-icon sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <circle cx="12" cy="12" r="5" fill="currentColor"/>
+                <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="12" y1="1" x2="12" y2="3"/>
+                    <line x1="12" y1="21" x2="12" y2="23"/>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                    <line x1="1" y1="12" x2="3" y2="12"/>
+                    <line x1="21" y1="12" x2="23" y2="12"/>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                </g>
+            </svg>
+            <svg class="theme-icon moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
+                <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+            </svg>`;
+    }
+
     // Theme toggle
     const savedTheme = localStorage.getItem('theme');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -95,11 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         ${project.languages.map(lang => `<span class="project-card__tag">${lang}</span>`).join('')}
                     </div>
                     <a href="${project.url}" target="_blank" rel="noopener noreferrer" class="project-card__link">
-                        Voir sur GitHub
+                        Voir sur GitHub <span class="sr-only">(nouvelle fenêtre)</span>
                     </a>
                 </article>
             `).join('');
-        } catch {
+        } catch (error) {
+            console.error('Failed to load projects:', error);
             grid.innerHTML = '<p class="projects-error">Impossible de charger les projets.</p>';
         }
     };

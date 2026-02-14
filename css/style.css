@@ -67,9 +67,9 @@ button {
     /* Couleurs - Mode sombre (défaut) */
     --color-bg: #05051a;
     --color-bg-secondary: #0a0a24;
-    --color-text: #b8860b;
-    --color-text-muted: #96700a;
-    --color-accent: #c99614;
+    --color-text: #f5d77a;
+    --color-text-muted: #d4af37;
+    --color-accent: #ffd700;
     --color-border: #151530;
     --color-header-bg: rgba(5, 5, 26, 0.95);
 
@@ -272,8 +272,8 @@ a:hover {
     color: var(--color-text);
 }
 
-.nav-active {
-    color: var(--color-accent) !important;
+.nav-menu a.nav-active {
+    color: var(--color-accent);
 }
 
 /* ===== Theme Toggle ===== */
@@ -489,6 +489,11 @@ a:hover {
     color: var(--color-text-muted);
 }
 
+.contact__label abbr[title] {
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
 .contact__input {
     padding: var(--spacing-sm) var(--spacing-md);
     background-color: var(--color-bg-secondary);
@@ -500,8 +505,9 @@ a:hover {
 }
 
 .contact__input:focus {
-    outline: none;
     border-color: var(--color-accent);
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
 }
 
 .contact__textarea {
@@ -537,7 +543,6 @@ a:hover {
     font-size: var(--font-size-xs);
     color: var(--color-text-muted);
     border-top: 1px solid var(--color-border);
-    opacity: 0.7;
 }
 
 .footer__links {
@@ -576,6 +581,18 @@ a:hover {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+@media (scripting: none) {
+    .fade-in {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+noscript .fade-in-fallback {
+    opacity: 1;
+    transform: none;
 }
 
 /* ===== Focus States (Accessibilité) ===== */
@@ -714,9 +731,9 @@ textarea:focus-visible {
     font-size: var(--font-size-md);
 }
 
-.blog-article__lead {
+.blog-article__content .blog-article__lead {
     font-size: var(--font-size-md);
-    color: var(--color-text-muted) !important;
+    color: var(--color-text-muted);
     border-left: 3px solid var(--color-accent);
     padding-left: var(--spacing-md);
 }

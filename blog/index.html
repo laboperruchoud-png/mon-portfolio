@@ -20,6 +20,7 @@
     <meta name="twitter:description" content="Blog de Raymond Perruchoud - Articles sur le développement et l'IA">
     <meta name="twitter:image" content="https://raymondperruchoud.ch/assets/images/og-image.jpg">
 
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
     <title>Blog | Raymond Perruchoud</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,39 +32,23 @@
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
         html{scroll-behavior:smooth}
-        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:#05051a;color:#b8860b}
+        body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background-color:#05051a;color:#f5d77a}
         .header{position:fixed;top:0;left:0;right:0;z-index:100;background-color:rgba(5,5,26,0.95);backdrop-filter:blur(10px)}
     </style>
+    <noscript><style>.fade-in{opacity:1!important;transform:none!important}</style></noscript>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Aller au contenu principal</a>
     <header class="header">
-        <nav class="nav">
+        <nav class="nav" aria-label="Navigation principale">
             <a href="../index.html" class="nav-logo">RP</a>
-            <ul class="nav-menu" id="nav-menu" role="navigation">
-                <li><a href="../index.html#about">A propos</a></li>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="../index.html#about">À propos</a></li>
                 <li><a href="../index.html#projects">Projets</a></li>
                 <li><a href="index.html" class="nav-active">Blog</a></li>
                 <li><a href="../index.html#contact">Contact</a></li>
             </ul>
-            <button class="theme-toggle" aria-label="Changer le thème">
-                <svg class="theme-icon sun" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                    <circle cx="12" cy="12" r="5" fill="currentColor"/>
-                    <g stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                        <line x1="12" y1="1" x2="12" y2="3"/>
-                        <line x1="12" y1="21" x2="12" y2="23"/>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
-                        <line x1="1" y1="12" x2="3" y2="12"/>
-                        <line x1="21" y1="12" x2="23" y2="12"/>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
-                    </g>
-                </svg>
-                <svg class="theme-icon moon" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true">
-                    <path fill="currentColor" d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
-                </svg>
-            </button>
+            <button class="theme-toggle" aria-label="Changer le thème"></button>
             <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="nav-menu">
                 <span></span>
                 <span></span>
@@ -75,7 +60,7 @@
     <main id="main-content">
         <section class="section blog-header">
             <h1>Blog</h1>
-            <p class="blog-header__subtitle">Reflexions sur le developpement et l'IA</p>
+            <p class="blog-header__subtitle">Réflexions sur le développement et l'IA</p>
         </section>
 
         <section class="section">
@@ -83,7 +68,7 @@
                 <article class="blog-card">
                     <a href="mon-premier-article.html" class="blog-card__link">
                         <div class="blog-card__meta">
-                            <time datetime="2026-02-12">12 fevrier 2026</time>
+                            <time datetime="2026-02-12">12 février 2026</time>
                             <span class="blog-card__reading-time">3 min de lecture</span>
                         </div>
                         <h2 class="blog-card__title">Mon premier article</h2>
@@ -94,11 +79,11 @@
                 <article class="blog-card">
                     <a href="apprendre-avec-ia.html" class="blog-card__link">
                         <div class="blog-card__meta">
-                            <time datetime="2026-02-10">10 fevrier 2026</time>
+                            <time datetime="2026-02-10">10 février 2026</time>
                             <span class="blog-card__reading-time">5 min de lecture</span>
                         </div>
-                        <h2 class="blog-card__title">Apprendre a coder avec l'IA</h2>
-                        <p class="blog-card__excerpt">Comment j'utilise Claude et d'autres outils d'IA pour accelerer mon apprentissage du developpement web.</p>
+                        <h2 class="blog-card__title">Apprendre à coder avec l'IA</h2>
+                        <p class="blog-card__excerpt">Comment j'utilise Claude et d'autres outils d'IA pour accélérer mon apprentissage du développement web.</p>
                     </a>
                 </article>
             </div>
@@ -108,7 +93,6 @@
     <footer class="footer">
         <div class="footer__links">
             <a href="https://github.com/Raymond" target="_blank" rel="noopener noreferrer">GitHub <span class="sr-only">(nouvelle fenêtre)</span></a>
-            <a href="#" target="_blank" rel="noopener noreferrer">LinkedIn <span class="sr-only">(nouvelle fenêtre)</span></a>
         </div>
         <p class="footer__copy">&copy; 2026 Raymond Perruchoud</p>
         <p class="footer__credit">Construit avec Claude Code</p>
