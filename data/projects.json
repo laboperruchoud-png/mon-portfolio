@@ -1,20 +1,30 @@
 [
   {
-    "name": "hello-python",
-    "description": "Un script Python simple pour apprendre les bases de la programmation.",
-    "languages": ["Python"],
-    "url": "https://github.com/laboperruchoud-png/hello-python"
+    "name": "neurogolfperformance",
+    "description": "Neuro π58™ Golf Performance — Raymond Perruchoud, Architecte Golf Neuro Performance",
+    "languages": ["CSS", "HTML", "JavaScript"],
+    "url": "https://github.com/laboperruchoud-png/neurogolfperformance",
+    "stars": 0
   },
   {
     "name": "mon-portfolio",
     "description": "Mon portfolio personnel construit avec HTML, CSS et JavaScript.",
     "languages": ["HTML", "CSS", "JavaScript"],
-    "url": "https://github.com/laboperruchoud-png/mon-portfolio"
+    "url": "https://github.com/laboperruchoud-png/mon-portfolio",
+    "stars": 0
   },
   {
     "name": "notes-cli",
-    "description": "Une application CLI pour prendre et organiser des notes.",
+    "description": "CLI pour prendre des notes — placeholder",
     "languages": ["Python"],
-    "url": "https://github.com/laboperruchoud-png/notes-cli"
+    "url": "https://github.com/laboperruchoud-png/notes-cli",
+    "stars": 0
+  },
+  {
+    "name": "hello-python",
+    "description": "Un script Python simple — projet portfolio",
+    "languages": ["Python"],
+    "url": "https://github.com/laboperruchoud-png/hello-python",
+    "stars": 0
   }
 ]
